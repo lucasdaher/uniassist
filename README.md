@@ -3,9 +3,9 @@ Este é o repositório com o código fonte do meu projeto UniAssist, uma ferrame
 
 ## Pré-requisitos
 > [!NOTE]
-> Você precisará ter o **Node.JS** instalado em seu computador para iniciar este projeto.
+> Você precisará ter o **Node.JS** instalado em seu computador para instalar as dependências deste projeto.
 
-- Instale as dependências do projeto utilizando `pnp run build`
+- Instale as dependências do projeto utilizando `pnpm run build`
 - Instale o **React Router DOM** utilizando `pnpm install react-router-dom localforage match-sorter sort-by`
 
 ## Funcionalidades

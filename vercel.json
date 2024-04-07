@@ -1,0 +1,42 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/index.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "src/main.tsx",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1",
+      "continue": true
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/src/index.tsx"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/build/index.html"
+    },
+    {
+      "source": "/request-access",
+      "destination": "/build/index.html"
+    },
+    {
+      "source": "/request-success",
+      "destination": "/build/index.html"
+    },
+    {
+      "source": "/app",
+      "destination": "/build/index.html"
+    }
+  ]
+}

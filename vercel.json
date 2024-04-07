@@ -2,10 +2,6 @@
   "version": 2,
   "builds": [
     {
-      "src": "src/index.html",
-      "use": "@vercel/static"
-    },
-    {
       "src": "src/main.tsx",
       "use": "@vercel/node"
     }
@@ -13,19 +9,19 @@
   "rewrites": [
     {
       "source": "/",
-      "destination": "/build/index.html"
+      "destination": "/src/main.tsx"
     },
     {
       "source": "/request-access",
-      "destination": "/build/index.html"
+      "destination": "/src/main.tsx"
     },
     {
       "source": "/request-success",
-      "destination": "/build/index.html"
+      "destination": "/src/main.tsx"
     },
     {
       "source": "/app",
-      "destination": "/build/index.html"
+      "destination": "/src/main.tsx"
     }
   ]
 }

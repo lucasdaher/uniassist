@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <section className="bg-blue-600 w-full p-8 mt-44">
+    <section className="bg-blue-600 w-full p-8 mt-16 md:mt-44">
       <div className="max-w-[1440px] mx-auto">
         <div className="">
           <h1 className="text-white font-sora font-bold text-3xl">

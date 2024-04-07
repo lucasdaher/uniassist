@@ -23,7 +23,7 @@ const Header = () => {
             >
               Inteligência Artificial
             </Link>
-            <span className="animate-rotate bg-blue-500 text-white font-bold text-xs px-1 rounded-md">
+            <span className="animate-rotate bg-blue-500 text-white leading-none font-bold text-xs p-1 rounded-md">
               NOVO
             </span>
           </li>

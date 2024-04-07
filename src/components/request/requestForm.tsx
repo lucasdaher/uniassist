@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import welcome from "../../assets/welcome.svg";
 
@@ -27,28 +27,46 @@ const RequestForm = ({ title }: RequestForm) => {
   } = useForm();
 
   const navigate = useNavigate();
-  const onSubmit = () => {
+  const onSubmit = (data: any) => {
     navigate("/request-success");
+    localStorage.setItem("emailAccess", JSON.stringify(data.email));
     handleAccess();
   };
 
-  // const [emailData, setEmailData] = useState(localStorage.getItem("emailData"));
+  const [storedEmail, setStoredEmail] = useState<string | null>(null);
+
+  useEffect(() => {
+    const emailStorage = localStorage.getItem("emailAccess");
+    if (emailStorage) {
+      const parsedData = JSON.parse(emailStorage);
+      setStoredEmail(parsedData);
+    }
+  }, []);
+
   const [isEmailFocus, setIsEmailFocus] = useState(false);
 
   return (
     <>
       {(localStorage.getItem("access") === "access" && (
         <div className="register flex flex-col justify-start md:justify-start items-center bg-white md:bg-gradient-to-t md:from-blue-200 md:to-blue-500 w-full h-screen md:h-screen overflow-hidden md:pt-24">
-          <div className="container bg-white w-full h-full md:h-auto md:w-[500px] px-6 py-12 rounded-md mx-auto mb-24 flex flex-col justify-center items-center">
+          <div className="container bg-white w-full h-full md:h-auto md:w-[500px] px-6 py-12 rounded-md mx-auto mb-24 flex flex-col justify-start md:justify-center items-center">
             <img src={welcome} alt="Welcome" className="w-80" />
 
             <h1 className="text-4xl font-bold text-blue-500 text-center mt-2">
               Bem-vindo de volta!
             </h1>
-            <p className="text-black/70 font-sora font-medium text-md mt-3 w-full text-center">
+            <p className="text-black/70 font-sora font-normal text-md mt-3 w-full text-center max-w-[452px]">
               Você já possui acesso a nossa plataforma, por tanto não precisa
               solicitar novamente.
             </p>
+            <div className="flex justify-center items-center border border-gray-400 bg-gray-100 border-opacity-30 w-full py-2 px-4 rounded-md mt-6 text-center max-w-[452px]">
+              <p className="text-sm text-black/70">
+                Você se cadastrou utilizando o e-mail{" "}
+                <span className="font-semibold text-sm text-blue-500">
+                  {storedEmail}
+                </span>
+              </p>
+            </div>
             <Link to={`/app`} className="mt-8 no-underline">
               <button
                 className="text-white font-medium font-sora bg-blue-500 px-6 py-2 rounded-md hover:bg-blue-700 transition-all duration-200"
@@ -80,14 +98,13 @@ const RequestForm = ({ title }: RequestForm) => {
                   handleSubmit(onSubmit)();
                 }}
               >
-                {/* Grupo do campo de Nome de usuário */}
                 <div className="form-group relative w-full">
                   <input
                     type="text"
                     placeholder="E-mail institucional"
                     {...register("email", {
                       required: true,
-                      pattern: /^[a-zA-Z][a-zA-Z.]*@(a|p)\.ucb\.br$/,
+                      pattern: /^[a-zA-Z0-9][a-zA-Z0-9.]*@(a|p)\.ucb\.br$/,
                     })}
                     onFocus={() => setIsEmailFocus(true)}
                     onBlur={() => setIsEmailFocus(false)}
@@ -131,7 +148,6 @@ const RequestForm = ({ title }: RequestForm) => {
                   </div>
                 </div>
 
-                {/* Botão de finalização da criação de conta */}
                 <button
                   type="submit"
                   className="text-white text-sm font-semibold bg-blue-500 px-6 py-4 rounded-md leading-none w-full mt-2 hover:bg-blue-600 transition-all duration-200"

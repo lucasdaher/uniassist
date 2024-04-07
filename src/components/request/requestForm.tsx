@@ -13,7 +13,7 @@ const RequestForm = () => {
 
   const navigate = useNavigate();
   const onSubmit = () => {
-    navigate("/app");
+    navigate("/request-success");
   };
 
   const [isNameFocus, setIsNameFocus] = useState(false);

@@ -1,5 +1,6 @@
-import controleDeTarefas from "../../assets/controledetarefas.svg";
+import controleDeTarefas from "../../assets/task.svg";
 import ia from "../../assets/ia.svg";
+import gratuito from "../../assets/free2.svg";
 
 import { MdKeyboardArrowRight } from "react-icons/md";
 
@@ -21,9 +22,9 @@ const Cards = () => {
     },
     {
       id: 3,
-      img: controleDeTarefas,
+      img: gratuito,
       name: "Gratuito para Estudantes",
-      desc: "Nossa plataforma é gratuita para estudantes que estiverem matriculado na Universidade Católica de Brasília.",
+      desc: "Por enquanto, a nossa plataforma é gratuita apenas para estudantes matriculados na Universidade Católica de Brasília.",
       buttonText: "Saber mais",
     },
   ];
@@ -31,11 +32,11 @@ const Cards = () => {
     <section
       className="max-w-[1440px] mx-auto grid justify-center place-content-center 
       gap-x-6 gap-y-8 grid-cols-1 sm:grid-cols-2 
-    md:grid-cols-2 lg:grid-cols-3 mt-28"
+    md:grid-cols-2 lg:grid-cols-3 mt-32"
     >
       {data.map((card) => (
         <div
-          className="bg-white py-6 px-8 w-full rounded-md max-w-[600px] hover:scale-105 transition-all duration-300"
+          className="bg-white hover:bg-blue-50 py-6 px-8 w-full rounded-md max-w-[600px] hover:scale-105 transition-all duration-300"
           key={card.id}
         >
           <img src={card.img} alt="Illustration Img" className="w-72" />

@@ -1,7 +1,4 @@
-import { IoIosSunny } from "react-icons/io";
-
 import { Link } from "react-router-dom";
-
 import uniAssistLogoBlack from "../assets/uniassistlogo.svg";
 
 const Header = () => {
@@ -13,7 +10,7 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="px-16 py-4 w-full bg-blue-700">
+      <div className="px-16 py-4 w-full bg-blue-500">
         <div className="max-w-[1440px] mx-auto flex justify-center items-center gap-12">
           <Link
             to={`/`}
@@ -26,18 +23,18 @@ const Header = () => {
             />
           </Link>
 
-          <ul className="flex justify-center items-center gap-8">
-            <li className="text-white font-normal text-sm hover:text-blue-900 hover:underline">
-              Início
+          <ul className="hidden lg:flex justify-center items-center gap-8">
+            <li className="text-white font-normal text-sm hover:text-blue-700 hover:underline">
+              <Link to={`/`}>Início</Link>
             </li>
-            <li className="text-white font-normal text-sm hover:text-blue-900 hover:underline">
-              Estudante
+            <li className="text-white font-normal text-sm hover:text-blue-700 hover:underline">
+              <Link to={`/student`}>Estudante</Link>
             </li>
-            <li className="text-white font-normal text-sm hover:text-blue-900 hover:underline">
-              Apresentação
+            <li className="text-white font-normal text-sm hover:text-blue-700 hover:underline">
+              <Link to={`/presentation`}>Apresentação</Link>
             </li>
-            <li className="text-white font-normal text-sm hover:text-blue-900 hover:underline">
-              Ajuda
+            <li className="text-white font-normal text-sm hover:text-blue-700 hover:underline">
+              <Link to={`/help`}>Ajuda</Link>
             </li>
           </ul>
         </div>

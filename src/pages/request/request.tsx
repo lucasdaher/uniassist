@@ -1,3 +1,4 @@
+import Footer from "../../components/footer";
 import Header from "../../components/header";
 import RequestForm from "../../components/request/requestForm";
 
@@ -7,8 +8,10 @@ const Request = () => {
       <Header />
 
       <main>
-        <RequestForm />
+        <RequestForm title="Solicitar Acesso" />
       </main>
+
+      <Footer />
     </div>
   );
 };

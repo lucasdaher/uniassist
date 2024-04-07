@@ -28,7 +28,7 @@ const Footer = () => {
           </li>
         </ul>
 
-        <p className="text-white font-semibold text-sm mt-4">
+        <p className="text-white font-semibold text-sm mt-4 text-center">
           Todos os direitos reservados para UniAssist &copy;
         </p>
       </div>

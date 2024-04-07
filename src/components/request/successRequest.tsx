@@ -1,6 +1,7 @@
 import Header from "../header";
 
 import milestones from "../../assets/milestones.svg";
+import { Link } from "react-router-dom";
 
 const SuccessRequest = () => {
   return (
@@ -18,12 +19,14 @@ const SuccessRequest = () => {
               Realizamos a verificação da sua matrícula em sua instituição e
               você já recebeu o seu acesso a nossa plataforma.
             </p>
-            <button
-              className="mt-8 text-white font-semibold bg-blue-500 px-6 py-2 text-md rounded-md hover:bg-blue-700 transition-all duration-300"
-              type="button"
-            >
-              Acessar plataforma
-            </button>
+            <Link to={`/app`} className="mt-8 no-underline">
+              <button
+                className="text-white font-semibold bg-blue-500 px-6 py-2 text-md rounded-md hover:bg-blue-700 transition-all duration-300"
+                type="button"
+              >
+                Acessar plataforma
+              </button>
+            </Link>
           </div>
         </div>
       </main>

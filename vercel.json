@@ -10,17 +10,6 @@
       "use": "@vercel/node"
     }
   ],
-  "routes": [
-    {
-      "src": "/static/(.*)",
-      "dest": "/static/$1",
-      "continue": true
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/src/main.tsx"
-    }
-  ],
   "rewrites": [
     {
       "source": "/",

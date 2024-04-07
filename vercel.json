@@ -1,27 +1,9 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "src/main.tsx",
-      "use": "@vercel/node"
-    }
-  ],
   "rewrites": [
     {
-      "source": "/",
-      "destination": "/src/main.tsx"
-    },
-    {
-      "source": "/request-access",
-      "destination": "/src/main.tsx"
-    },
-    {
-      "source": "/request-success",
-      "destination": "/src/main.tsx"
-    },
-    {
-      "source": "/app",
-      "destination": "/src/main.tsx"
+      "source": "/(.*)",
+      "destination": "/"
     }
   ]
 }

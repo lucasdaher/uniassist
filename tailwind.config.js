@@ -48,6 +48,7 @@ module.exports = {
         "dark-700": "#090000",
         "dark-800": "#070000",
         "dark-900": "#050000",
+        gray: "#ccc",
         //////////////////////////// shadcn
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

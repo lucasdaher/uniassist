@@ -27,14 +27,14 @@ const DelAccount = () => {
     <AlertDialog>
       <AlertDialogTrigger asChild>
         <button type="button" className="flex justify-center items-center">
-          <MdDelete className="mr-2 h-4 w-4 text-red-500" />
-          <span className="text-red-500">Deletar conta</span>
+          <MdDelete className="mr-2 h-4 w-4 text-white" />
+          <span className="text-white">Excluir conta</span>
         </button>
       </AlertDialogTrigger>
-      <AlertDialogContent>
+      <AlertDialogContent className="rounded-md">
         <AlertDialogHeader>
           <AlertDialogTitle className="text-red-500">
-            Você tem certeza que deseja deletar a sua conta?
+            Você tem certeza que deseja excluir a sua conta?
           </AlertDialogTitle>
           <AlertDialogDescription>
             Ao confirmar, você perderá acesso total e sua conta será excluida
@@ -49,7 +49,7 @@ const DelAccount = () => {
               deleteAccount();
             }}
           >
-            Deletar conta
+            Desejo excluir a minha conta
           </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>

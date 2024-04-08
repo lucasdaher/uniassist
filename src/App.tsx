@@ -3,7 +3,6 @@ import Announce from "./components/app/announcements/announce";
 import Header from "./components/app/header";
 
 import { useNavigate } from "react-router-dom";
-import { Progress } from "./components/ui/progress";
 
 function App() {
   const navigate = useNavigate();

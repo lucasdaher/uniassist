@@ -1,6 +1,6 @@
 import Header from "@/components/app/header";
 
-import { FaRobot, FaTasks, FaRegNewspaper } from "react-icons/fa";
+import { FaTasks, FaRegNewspaper } from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
 import { BsWechat } from "react-icons/bs";
 

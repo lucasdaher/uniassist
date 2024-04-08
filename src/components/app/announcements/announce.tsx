@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 const Announce = () => {
   return (
     <>
-      <div className=" w-full mx-auto bg-blue-50 border border-blue-500/70 p-4 rounded-md mt-12 flex justify-center items-center gap-12">
+      <div className=" w-full mx-auto bg-blue-50 border border-blue-500/30 p-4 rounded-md mt-12 flex justify-center items-center gap-12">
         <img src={announce} alt="Announcement Image" className="w-40" />
 
         <div className="">

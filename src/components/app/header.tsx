@@ -1,5 +1,11 @@
+import { useEffect, useState } from "react";
+
 import { Link } from "react-router-dom";
 import uniAssistLogo from "../../assets/uniassistlogo.svg";
+
+import { TbUser } from "react-icons/tb";
+import { IoSettingsOutline } from "react-icons/io5";
+
 import { Avatar, AvatarFallback } from "../ui/avatar";
 
 import {
@@ -11,11 +17,6 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-
-import { useEffect, useState } from "react";
-
-import { TbUser } from "react-icons/tb";
-import { IoSettingsOutline } from "react-icons/io5";
 
 interface HeaderProps {
   selected?: string;
@@ -46,7 +47,7 @@ const Header = ({ selected = "" }: HeaderProps) => {
           <li className="text-white font-sora font-normal text-sm hover:text-blue-500 transition-all duration-200">
             <Link
               to={`/app/tools`}
-              className={`${
+              className={`hover:text-blue-500 transition-all duration-200 ${
                 selected === "tools"
                   ? "text-blue-200"
                   : "no-underline text-white"
@@ -73,7 +74,7 @@ const Header = ({ selected = "" }: HeaderProps) => {
           <li className="text-white font-sora font-normal text-sm hover:text-blue-500 transition-all duration-200">
             <Link
               to={`/app/tools/tasks`}
-              className={`${
+              className={`hover:text-blue-500 transition-all duration-200 ${
                 selected === "tools/tasks"
                   ? "text-blue-200"
                   : "no-underline text-white"
@@ -113,13 +114,14 @@ const Header = ({ selected = "" }: HeaderProps) => {
             </DropdownMenuLabel>
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
+              <Link to={`/app/profile`}>
+                <DropdownMenuItem>
+                  <TbUser className="mr-2 h-4 w-4" />
+                  <span>Meu perfil</span>
+                </DropdownMenuItem>
+              </Link>
               <DropdownMenuItem>
-                <TbUser className="mr-2 h-4 w-4" />
-                <span>Meu perfil</span>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <IoSettingsOutline className="mr-2 h4 w-4" />
-                {/* <Settings className="mr-2 h-4 w-4" /> */}
+                <IoSettingsOutline className="mr-2 h-4 w-4" />
                 <span>Configurações</span>
               </DropdownMenuItem>
             </DropdownMenuGroup>

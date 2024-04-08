@@ -4,6 +4,7 @@ import Request from "./pages/request/request";
 import SuccessRequest from "./components/request/successRequest";
 import App from "./App";
 import Tools from "./pages/app/tools/tools";
+import Profile from "./pages/profile/Profile";
 
 export const router = createBrowserRouter([
   {
@@ -25,5 +26,9 @@ export const router = createBrowserRouter([
   {
     path: "/app/tools",
     element: <Tools />,
+  },
+  {
+    path: "/app/profile",
+    element: <Profile />,
   },
 ]);

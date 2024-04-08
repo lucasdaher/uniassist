@@ -32,15 +32,23 @@ const Tools = () => {
         <Header selected="tools" />
 
         <main className="max-w-[1440px] mx-auto mt-12">
+          <h1 className="text-3xl font-sora font-bold text-blue-500 mb-1">
+            Ferramentas disponíveis
+          </h1>
+          <p className="text-md font-sora font-regular text-black/70 border-b border-[#ccc]/60 pb-6 mb-8">
+            Estamos constantemente trabalhando para adicionar novas ferramentas
+            para facilitar a sua vida com as tarefas universitárias. Confira as
+            ferramentas disponíveis para você:
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
             {cards.map((card) => (
               <div
-                className="card border border-blue-500 bg-blue-50 rounded-md p-8"
+                className="card border border-blue-500/30 bg-blue-50 rounded-md p-8"
                 key={card.id}
               >
                 <div className="flex justify-start items-center gap-4">
                   <span className="leading-none">{card.icon}</span>
-                  <h1 className="text-xl text-blue-500 leading-none font-sora font-bold">
+                  <h1 className="text-xl text-blue-500 leading-none font-sora font-bold w-full h-auto">
                     {card.title}
                   </h1>
                 </div>

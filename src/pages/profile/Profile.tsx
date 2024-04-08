@@ -60,23 +60,6 @@ const Profile = () => {
                 </button>
               </div>
             </div>
-            {/* <div className="flex flex-col justify-center items-start">
-              <h1 className="font-sora font-medium text-black">E-mail:</h1>
-              <div className="flex justify-start items-center gap-2 bg-white px-2 py-2 rounded-md border border-[#ccc]/70">
-                <h1 className="text-lg font-sora font-medium text-black/40 leading-none">
-                  {storedEmail}
-                </h1>
-                <button className="outline-none border-none" type="button">
-                  <FaEdit className="text-black/40 text-lg leading-none" />
-                </button>
-              </div>
-              <span className="text-sm text-blue-500 text-left w-full font-sora">
-                Alterar e-mail institucional
-              </span>
-              <p className="text-sm font-sora font-normal text-black/70 mt-2">
-                Universidade Católica de Brasília
-              </p>
-            </div> */}
           </div>
         </section>
 

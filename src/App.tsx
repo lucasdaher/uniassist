@@ -17,7 +17,7 @@ function App() {
       <div className="">
         <Header />
 
-        <main className="max-w-[1440px] mx-auto">
+        <main className="max-w-[1440px] mx-auto px-4">
           <Announce />
           <LastTasks />
         </main>

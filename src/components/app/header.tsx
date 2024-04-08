@@ -17,7 +17,11 @@ import { useEffect, useState } from "react";
 import { TbUser } from "react-icons/tb";
 import { IoSettingsOutline } from "react-icons/io5";
 
-const Header = () => {
+interface HeaderProps {
+  selected?: string;
+}
+
+const Header = ({ selected = "" }: HeaderProps) => {
   const [storedEmail, setStoredEmail] = useState<string | null>(null);
 
   useEffect(() => {
@@ -30,7 +34,7 @@ const Header = () => {
 
   return (
     <header className="bg-black w-full py-1">
-      <div className="max-w-[1440px] mx-auto flex justify-center items-center gap-12">
+      <div className="max-w-[1440px] mx-auto flex justify-between items-center gap-12">
         <Link
           to={`/app`}
           className="hover:scale-105 transition-all duration-300"
@@ -40,12 +44,25 @@ const Header = () => {
 
         <ul className="flex justify-center items-center gap-8">
           <li className="text-white font-sora font-normal text-sm hover:text-blue-500 transition-all duration-200">
-            <Link to={`/app/tools`}>Ferramentas</Link>
+            <Link
+              to={`/app/tools`}
+              className={`${
+                selected === "tools"
+                  ? "text-blue-200"
+                  : "no-underline text-white"
+              }`}
+            >
+              Ferramentas
+            </Link>
           </li>
           <li className="text-white font-sora font-normal text-sm flex justify-center items-center gap-2">
             <Link
               to={`/app/tools/ia`}
-              className="hover:text-blue-500 transition-all duration-200 no-underline"
+              className={`${
+                selected === "tools/ia"
+                  ? "text-blue-200"
+                  : "no-underline text-white"
+              } hover:text-blue-500 transition-all duration-200`}
             >
               Inteligência Artificial
             </Link>
@@ -54,12 +71,25 @@ const Header = () => {
             </span>
           </li>
           <li className="text-white font-sora font-normal text-sm hover:text-blue-500 transition-all duration-200">
-            <Link to={`/app/tools/tasks`}>Tarefas</Link>
+            <Link
+              to={`/app/tools/tasks`}
+              className={`${
+                selected === "tools/tasks"
+                  ? "text-blue-200"
+                  : "no-underline text-white"
+              }`}
+            >
+              Tarefas
+            </Link>
           </li>
           <li className="text-white font-sora font-normal text-sm flex justify-center items-center gap-2">
             <Link
               to={`/app/benefits`}
-              className="hover:text-blue-500 transition-all duration-200 no-underline"
+              className={`${
+                selected === "benefits"
+                  ? "text-blue-200"
+                  : "no-underline text-white"
+              } hover:text-blue-500 transition-all duration-200`}
             >
               Premium
             </Link>

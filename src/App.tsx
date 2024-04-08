@@ -3,6 +3,7 @@ import Announce from "./components/app/announcements/announce";
 import Header from "./components/app/header";
 
 import { useNavigate } from "react-router-dom";
+import LastTasks from "./components/app/task/lastTasks";
 
 function App() {
   const navigate = useNavigate();
@@ -18,6 +19,7 @@ function App() {
 
         <main className="max-w-[1440px] mx-auto">
           <Announce />
+          <LastTasks />
         </main>
       </div>
     </>

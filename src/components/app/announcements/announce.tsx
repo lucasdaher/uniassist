@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 const Announce = () => {
   return (
     <>
-      <div className="max-w-[700px] w-full mx-auto bg-blue-50 border border-blue-500/70 p-4 rounded-md mt-12 flex justify-center items-center gap-12">
+      <div className=" w-full mx-auto bg-blue-50 border border-blue-500/70 p-4 rounded-md mt-12 flex justify-center items-center gap-12">
         <img src={announce} alt="Announcement Image" className="w-40" />
 
         <div className="">
@@ -26,12 +26,9 @@ const Announce = () => {
             Gostaria de saber mais sobre os benefícios de ser Premium em nossa
             plataforma?
           </p>
-          {/* <button className="bg-blue-500 text-white font-sora font-medium px-8 py-2 rounded-md hover:bg-blue-700 mt-6">
-            Conhecer benefícios
-          </button> */}
+
           <AlertDialog>
             <AlertDialogTrigger asChild>
-              {/* <Button variant="outline">Show Dialog</Button> */}
               <button className="bg-blue-500 text-white font-sora font-medium px-8 py-2 rounded-md hover:bg-blue-700 mt-6">
                 Conhecer benefícios
               </button>

@@ -48,7 +48,7 @@ const RequestForm = ({ title }: RequestForm) => {
   return (
     <>
       {(localStorage.getItem("access") === "access" && (
-        <div className="register flex flex-col justify-start md:justify-start items-center bg-white md:bg-gradient-to-t md:from-blue-200 md:to-blue-500 w-full h-screen md:h-screen overflow-hidden md:pt-24">
+        <div className="register flex flex-col justify-start md:justify-start items-center bg-white md:bg-gradient-to-t md:from-blue-200 md:to-blue-500 w-full h-full pb-52 overflow-hidden md:pt-24">
           <div className="container bg-white w-full h-full md:h-auto md:w-[500px] px-6 py-12 rounded-md mx-auto mb-24 flex flex-col justify-start md:justify-center items-center">
             <img src={welcome} alt="Welcome" className="w-80" />
 

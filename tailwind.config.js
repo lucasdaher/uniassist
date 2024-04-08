@@ -93,6 +93,10 @@ module.exports = {
           "0%, 100%": { transform: "translateY(-12%)" },
           "50%": { transform: "translateY(0%)" },
         },
+        ia: {
+          "0%, 100%": { transform: "translateX(-12%)" },
+          "50%": { transform: "translateX(0%)" },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -103,6 +107,7 @@ module.exports = {
         },
       },
       animation: {
+        ia: "ia 1s ease-in-out infinite",
         rotate: "rotate 1s ease-in-out infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",

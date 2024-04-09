@@ -19,7 +19,7 @@ const Announce = () => {
         <img
           src={announce}
           alt="Announcement Image"
-          className="w-full md:w-44"
+          className="w-full md:w-44 max-w-[364px]"
         />
 
         <div className="">

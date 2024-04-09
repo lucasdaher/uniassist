@@ -7,8 +7,9 @@ import { TbUser } from "react-icons/tb";
 import { IoSettingsOutline } from "react-icons/io5";
 
 import { Avatar, AvatarFallback } from "../ui/avatar";
+import { IoMdClose } from "react-icons/io";
 
-import { FaAlignRight } from "react-icons/fa6";
+import { MdMenu } from "react-icons/md";
 
 import {
   DropdownMenu,
@@ -36,7 +37,7 @@ const Header = ({ selected = "" }: HeaderProps) => {
     }
   }, []);
 
-  const [sbOpen, setSbOpen] = useState<boolean>(false);
+  const [sbOpen, setSbOpen] = useState<boolean>(true);
 
   const handleSidebar = () => {
     setSbOpen(!sbOpen);
@@ -44,7 +45,7 @@ const Header = ({ selected = "" }: HeaderProps) => {
 
   return (
     <>
-      <Sidebar />
+      <Sidebar open={sbOpen} handle={handleSidebar} />
       <header className="bg-black w-full py-1">
         <div className="px-8 max-w-[1440px] mx-auto flex justify-between items-center gap-12">
           <Link
@@ -113,10 +114,17 @@ const Header = ({ selected = "" }: HeaderProps) => {
 
           <div className="flex justify-center items-center gap-4">
             <button className="outline-none border-none">
-              <FaAlignRight
-                className="md:hidden text-white text-xl"
-                onClick={() => handleSidebar()}
-              />
+              {sbOpen ? (
+                <MdMenu
+                  className="md:hidden text-white text-3xl"
+                  onClick={() => handleSidebar()}
+                />
+              ) : (
+                <IoMdClose
+                  className="md:hidden text-white text-3xl"
+                  onClick={() => handleSidebar()}
+                />
+              )}
             </button>
 
             <div className="hidden md:flex">

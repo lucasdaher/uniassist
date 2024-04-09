@@ -4,6 +4,15 @@ import { FaTasks, FaRegNewspaper } from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
 import { BsWechat } from "react-icons/bs";
 
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
+
 const cards = [
   {
     id: 1,
@@ -31,14 +40,24 @@ const Tools = () => {
       <div className="">
         <Header selected="tools" />
 
-        <main className="max-w-[1440px] mx-auto mt-12">
-          <h1 className="text-3xl font-sora font-bold text-blue-500 mb-1">
+        <main className="max-w-[1440px] mx-auto mt-12 px-4">
+          <Breadcrumb className="mt-8">
+            <BreadcrumbList className="text-md font-sora">
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Início</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>Ferramentas</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+
+          <h1 className="text-3xl font-sora font-bold text-blue-500 mb-1 mt-6">
             Ferramentas disponíveis
           </h1>
           <p className="text-md font-sora font-regular text-black/70 border-b border-[#ccc]/60 pb-6 mb-8">
-            Estamos constantemente trabalhando para adicionar novas ferramentas
-            para facilitar a sua vida com as tarefas universitárias. Confira as
-            ferramentas disponíveis para você:
+            Confira todas as ferramentas disponíveis em nossa plataforma:
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
             {cards.map((card) => (

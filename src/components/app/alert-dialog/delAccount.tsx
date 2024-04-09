@@ -26,10 +26,12 @@ const DelAccount = () => {
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
-        <button type="button" className="flex justify-center items-center">
+        <div className="flex justify-center items-center">
           <MdDelete className="mr-2 h-4 w-4 text-white" />
-          <span className="text-white">Excluir conta</span>
-        </button>
+          <span className="text-white font-sora text-md font-medium">
+            Excluir conta
+          </span>
+        </div>
       </AlertDialogTrigger>
       <AlertDialogContent className="rounded-md">
         <AlertDialogHeader>

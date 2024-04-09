@@ -7,11 +7,11 @@ import { BsWechat } from "react-icons/bs";
 import {
   Breadcrumb,
   BreadcrumbItem,
-  BreadcrumbLink,
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import { Link } from "react-router-dom";
 
 const cards = [
   {
@@ -40,11 +40,11 @@ const Tools = () => {
       <div className="">
         <Header selected="tools" />
 
-        <main className="max-w-[1440px] mx-auto mt-12 px-4">
+        <main className="max-w-[1440px] mx-auto mt-6 px-4">
           <Breadcrumb className="mt-8">
             <BreadcrumbList className="text-md font-sora">
               <BreadcrumbItem>
-                <BreadcrumbLink href="/">Início</BreadcrumbLink>
+                <Link to={`/app`}>Início</Link>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
@@ -66,7 +66,7 @@ const Tools = () => {
                 key={card.id}
               >
                 <div className="flex justify-start items-center gap-4">
-                  <span className="leading-none">{card.icon}</span>
+                  {/* <span className="leading-none">{card.icon}</span> */}
                   <h1 className="text-xl text-blue-500 leading-none font-sora font-bold w-full h-auto">
                     {card.title}
                   </h1>
@@ -84,6 +84,12 @@ const Tools = () => {
             ))}
           </div>
         </main>
+
+        <footer className="mt-24 bg-black py-2 px-6 w-full">
+          <h1 className="font-sora font-medium text-white/70 text-sm">
+            UniAssist.com
+          </h1>
+        </footer>
       </div>
     </>
   );

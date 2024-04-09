@@ -3,14 +3,12 @@ import Header from "@/components/app/header";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
-import { FaArrowLeft } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { FaEdit } from "react-icons/fa";
 
 import {
   Breadcrumb,
   BreadcrumbItem,
-  BreadcrumbLink,
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
@@ -32,14 +30,14 @@ const Profile = () => {
   return (
     <>
       <Header />
-      <main className="max-w-[1440px] mx-auto mt-4 p-4">
-        <Link to={`/app`} className="no-underline">
+      <main className="max-w-[1440px] mx-auto px-4">
+        {/* <Link to={`/app`} className="no-underline">
           <FaArrowLeft className="text-blue-500 hover:text-blue-700 transition-all duration-300 text-2xl" />
-        </Link>
-        <Breadcrumb className="mt-8">
+        </Link> */}
+        <Breadcrumb className="">
           <BreadcrumbList className="text-md font-sora">
             <BreadcrumbItem>
-              <BreadcrumbLink href="/">Início</BreadcrumbLink>
+              <Link to={`/app`}>Início</Link>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>

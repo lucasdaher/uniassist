@@ -23,10 +23,8 @@ const Sidebar = ({ open, handle }: SidebarProps) => {
   }, []);
   return (
     <aside
-      className={`inline md:hidden border-t border-white/30 bg-black w-full h-full absolute transition-all duration-300 ${
-        open
-          ? "top-[63px] -right-[100%] invisible"
-          : "top-[63px] right-0 visible"
+      className={`fixed lg:hidden xl:hidden border-t border-white/30 bg-black w-full h-full transition-all duration-300 ${
+        open ? "top-[63px] -right-[100%]" : "top-[63px] right-0"
       } z-20`}
     >
       <ul className="flex flex-col justify-center items-start gap-4 z-10 px-12 py-12">

@@ -1,14 +1,3 @@
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from "@/components/ui/alert-dialog";
 import announce from "../../../assets/coins.svg";
 import { Link } from "react-router-dom";
 
@@ -31,30 +20,11 @@ const Announce = () => {
             plataforma?
           </p>
 
-          <AlertDialog>
-            <AlertDialogTrigger asChild>
-              <button className="bg-blue-500 text-white font-sora font-medium px-8 py-3 rounded-md hover:bg-blue-700 mt-6">
-                Conhecer benefícios
-              </button>
-            </AlertDialogTrigger>
-            <AlertDialogContent>
-              <AlertDialogHeader>
-                <AlertDialogTitle className="text-blue-500">
-                  Você será redirecionado para outra página
-                </AlertDialogTitle>
-                <AlertDialogDescription>
-                  Você deseja ser redirecionado(a) até outra página para saber
-                  mais sobre os benefícios de ser Premium?
-                </AlertDialogDescription>
-              </AlertDialogHeader>
-              <AlertDialogFooter>
-                <AlertDialogCancel>Não</AlertDialogCancel>
-                <Link to={`/app/benefits`} className="no-underline">
-                  <AlertDialogAction>Sim, continuar</AlertDialogAction>
-                </Link>
-              </AlertDialogFooter>
-            </AlertDialogContent>
-          </AlertDialog>
+          <Link to={`/app/benefits`}>
+            <button className="bg-blue-500 text-white text-md font-sora font-medium px-8 py-3 rounded-md hover:bg-blue-700 mt-6">
+              Conhecer benefícios
+            </button>
+          </Link>
         </div>
       </div>
     </>

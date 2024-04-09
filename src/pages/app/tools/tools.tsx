@@ -71,7 +71,7 @@ const Tools = () => {
                     {card.title}
                   </h1>
                 </div>
-                <p className="text-md text-black/70 h-[96px] font-sora font-normal mt-3">
+                <p className="text-md text-black/70 h-auto min-h-[96px] font-sora font-normal mt-3">
                   {card.desc}
                 </p>
                 <button className="text-blue-500 outline-none border-none flex justify-center items-center gap-1 mt-6 group hover:text-blue-700">

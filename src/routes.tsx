@@ -5,11 +5,15 @@ import SuccessRequest from "./components/request/successRequest";
 import App from "./App";
 import Tools from "./pages/app/tools/tools";
 import Profile from "./pages/profile/Profile";
+import Benefits from "./pages/app/benefits/benefits";
+import Error from "./pages/error/error";
+import Curriculum from "./pages/app/tools/curriculum/curriculum";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+    errorElement: <Error />,
   },
   {
     path: "/request-access",
@@ -24,8 +28,16 @@ export const router = createBrowserRouter([
     element: <App />,
   },
   {
+    path: "/app/benefits",
+    element: <Benefits />,
+  },
+  {
     path: "/app/tools",
     element: <Tools />,
+  },
+  {
+    path: "/app/tools/curriculum",
+    element: <Curriculum />,
   },
   {
     path: "/app/profile",

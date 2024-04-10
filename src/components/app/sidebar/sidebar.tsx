@@ -27,7 +27,7 @@ const Sidebar = ({ open, handle }: SidebarProps) => {
         open ? "top-[63px] -right-[100%]" : "top-[63px] right-0"
       } z-20`}
     >
-      <ul className="flex flex-col justify-center items-start gap-4 z-10 px-12 py-12">
+      <ul className="flex flex-col justify-center items-start gap-4 z-10 px-12 py-8">
         <li className="flex justify-start items-center gap-4 mt-2 pb-5 border-b border-gray/30 w-full">
           <Link
             to={`/app/profile`}
@@ -50,15 +50,7 @@ const Sidebar = ({ open, handle }: SidebarProps) => {
             </>
           </Link>
         </li>
-        <li className="text-white font-sora font-normal text-lg hover:text-blue-500 transition-all duration-200 w-full">
-          <Link
-            to={`/app/tools`}
-            className={`text-white hover:text-blue-500 transition-all duration-200`}
-            onClick={() => handle}
-          >
-            Ferramentas
-          </Link>
-        </li>
+
         <li className="text-white font-sora font-normal text-lg flex justify-start items-center gap-2 w-full">
           <Link
             to={`/app/tools/ia`}
@@ -70,12 +62,32 @@ const Sidebar = ({ open, handle }: SidebarProps) => {
             NOVO
           </span>
         </li>
+        <li className="text-white font-sora font-normal text-lg flex justify-start items-center gap-2 w-full">
+          <Link
+            to={`/app/tools/ia`}
+            className={`text-white hover:text-blue-500 transition-all duration-200`}
+          >
+            Construtor de Currículo
+          </Link>
+          <span className="animate-rotate bg-blue-500 text-white leading-none font-bold text-xs p-1 rounded-md">
+            NOVO
+          </span>
+        </li>
         <li className="text-white font-sora font-normal text-lg hover:text-blue-500 transition-all duration-200 w-full">
           <Link
             to={`/app/tools/tasks`}
             className={`hover:text-blue-500 transition-all duration-200`}
           >
-            Tarefas
+            Agenda de Tarefas
+          </Link>
+        </li>
+        <li className="text-white font-sora font-normal text-lg hover:text-blue-500 transition-all duration-200 w-full">
+          <Link
+            to={`/app/tools`}
+            className={`text-white hover:text-blue-500 transition-all duration-200`}
+            onClick={() => handle}
+          >
+            Ferramentas
           </Link>
         </li>
         <li className="text-white font-sora font-normal text-lg flex justify-start items-center gap-2 w-full">

@@ -22,6 +22,9 @@ import {
 } from "@/components/ui/dropdown-menu";
 import Sidebar from "./sidebar/sidebar";
 
+import { RiVipCrown2Fill } from "react-icons/ri";
+import { FaToolbox } from "react-icons/fa";
+
 interface HeaderProps {
   selected?: string;
 }
@@ -156,6 +159,24 @@ const Header = ({ selected = "" }: HeaderProps) => {
                       <IoSettingsOutline className="mr-2 h-4 w-4" />
                       <span>Configurações</span>
                     </DropdownMenuItem>
+                  </DropdownMenuGroup>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuGroup>
+                    <Link to={`/app/tools`}>
+                      <DropdownMenuItem>
+                        <FaToolbox className="mr-2 h-4 w-4" />
+                        <span>Ferramentas</span>
+                        <span className="ml-2 text-white bg-blue-500 rounded-md font-sora font-bold text-xs px-1 animate-rotate">
+                          NOVO
+                        </span>
+                      </DropdownMenuItem>
+                    </Link>
+                    <Link to={`/app/benefits`}>
+                      <DropdownMenuItem>
+                        <RiVipCrown2Fill className="mr-2 h-4 w-4" />
+                        <span>Premium</span>
+                      </DropdownMenuItem>
+                    </Link>
                   </DropdownMenuGroup>
                 </DropdownMenuContent>
               </DropdownMenu>

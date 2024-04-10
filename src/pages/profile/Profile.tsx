@@ -14,9 +14,6 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 
-import rocket from "../../assets/rocket.svg";
-import { MdOutlineWorkspacePremium } from "react-icons/md";
-
 const Profile = () => {
   const [storedEmail, setStoredEmail] = useState<string | null>(null);
 
@@ -35,9 +32,6 @@ const Profile = () => {
     <>
       <Header />
       <main className="max-w-[1440px] mx-auto px-4">
-        {/* <Link to={`/app`} className="no-underline">
-          <FaArrowLeft className="text-blue-500 hover:text-blue-700 transition-all duration-300 text-2xl" />
-        </Link> */}
         <Breadcrumb className="mt-6">
           <BreadcrumbList className="text-md font-sora">
             <BreadcrumbItem>
@@ -91,12 +85,12 @@ const Profile = () => {
           </section>
 
           {/* Anúncio Premium */}
-          <section className="w-full">
-            <div className="flex flex-col md:flex-row justify-start items-center gap-4 border border-blue-500/30 bg-blue-50 rounded-md p-4">
+          {/* <section className="w-full">
+            <div className="flex flex-col md:flex-row justify-start items-start md:items-center gap-4 border border-blue-500/30 bg-blue-50 rounded-md p-4">
               <img src={rocket} alt="Rocket business" className="w-64" />
               <div className="">
                 <h1 className="font-sora font-bold text-blue-500 text-xl mt-2">
-                  Premium
+                  Deseja se tornar Premium?
                 </h1>
                 <p className="text-md font-sora font-normal text-black/70 max-w-[500px] mt-2">
                   Você ainda não adquiriu os benefícios de ser um usuário
@@ -114,13 +108,13 @@ const Profile = () => {
                 </button>
               </div>
             </div>
-          </section>
+          </section> */}
 
           {/* Zona de Perigo */}
-          <section className="w-full">
+          <section className="w-full mb-12">
             <div className="flex flex-col justify-center items-start gap-2 border border-red-500/30 bg-red-50 rounded-md p-4 w-full">
               <h1 className="font-sora font-bold text-red-500 text-xl mt-2">
-                Zona de perigo
+                Excluir Minha Conta
               </h1>
               <p className="text-md font-sora font-normal text-red-600">
                 Você pode excluir a sua conta a qualquer momento clicando no

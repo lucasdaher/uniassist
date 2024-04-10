@@ -74,7 +74,7 @@ const Tools = () => {
                   <img
                     src={card.img}
                     alt="Tool Illustration"
-                    className="max-w-[400px] w-64 mb-4"
+                    className="max-w-[400px] w-full mb-4"
                   />
                   {/* <span className="leading-none">{card.icon}</span> */}
                   <h1 className="text-xl text-blue-500 leading-none font-sora font-bold w-full h-auto">
@@ -90,7 +90,7 @@ const Tools = () => {
                     to={`/app/tools/${card.url}`}
                     className="no-underline leading-none"
                   >
-                    <h1 className="font-sora font-medium text-blue-500 group-hover:text-blue-700">
+                    <h1 className="font-sora font-medium text-blue-500 group-hover:text-blue-700 text-md sm:text-md text-left">
                       Acessar ferramenta
                     </h1>
                   </Link>

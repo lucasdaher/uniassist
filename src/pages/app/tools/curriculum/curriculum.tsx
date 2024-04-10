@@ -135,9 +135,11 @@ const Curriculum = () => {
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
+
         <h1 className="text-3xl font-sora font-bold text-blue-500 mt-6 leading-normal">
           Criador de Currículo
         </h1>
+
         <p className="text-md font-sora font-normal text-black/70 mt-1">
           Está com dificuldades em construir o seu currículo? Está aqui uma
           ferramenta que te ajudará.

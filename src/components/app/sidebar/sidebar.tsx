@@ -56,11 +56,8 @@ const Sidebar = ({ open, handle }: SidebarProps) => {
             to={`/app/tools/ia`}
             className={`text-white hover:text-blue-500 transition-all duration-200`}
           >
-            Inteligência Artificial
+            Assistente
           </Link>
-          <span className="animate-rotate bg-blue-500 text-white leading-none font-bold text-xs p-1 rounded-md">
-            NOVO
-          </span>
         </li>
         <li className="text-white font-sora font-normal text-lg flex justify-start items-center gap-2 w-full">
           <Link

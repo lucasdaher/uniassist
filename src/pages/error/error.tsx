@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 import ErrorImg from "../../assets/404.svg";
 import Header from "@/components/app/header";
+import { useEffect } from "react";
 
 const Error = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Header />

@@ -14,6 +14,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const cards = [
   {
@@ -26,7 +27,7 @@ const cards = [
   {
     id: 2,
     img: ia,
-    url: "chatbot",
+    url: "",
     title: "Inteligência Artificial",
     desc: "Para facilitar a sua vida, nós integramos o ChatGPT dentro da nossa plataforma para que você tenha tudo em um só lugar, melhorando o seu workflow.",
   },
@@ -40,6 +41,9 @@ const cards = [
 ];
 
 const Tools = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div className="">
@@ -86,14 +90,26 @@ const Tools = () => {
                 </p>
                 <button className="text-blue-500 outline-none border-none flex justify-center items-center gap-1 mt-6 group hover:text-blue-700">
                   <IoIosArrowForward className="text-2xl text-blue-500 animate-ia group-hover:text-blue-700" />
-                  <Link
-                    to={`/app/tools/${card.url}`}
-                    className="no-underline leading-none"
-                  >
-                    <h1 className="font-sora font-medium text-blue-500 group-hover:text-blue-700 text-md sm:text-md text-left">
-                      Acessar ferramenta
-                    </h1>
-                  </Link>
+                  {card.title === "Agenda de Tarefas" ||
+                  card.title === "Construtor de Currículo" ? (
+                    <Link
+                      to={`/app/tools/${card.url}`}
+                      className="no-underline leading-none"
+                    >
+                      <h1 className="font-sora font-medium text-blue-500 group-hover:text-blue-700 text-md sm:text-md text-left">
+                        Acessar ferramenta
+                      </h1>
+                    </Link>
+                  ) : (
+                    <a
+                      href="https://uniassist-chatbot.vercel.app/"
+                      className="no-underline leading-none"
+                    >
+                      <h1 className="font-sora font-medium text-blue-500 group-hover:text-blue-700 text-md sm:text-md text-left">
+                        Acessar ferramenta
+                      </h1>
+                    </a>
+                  )}
                 </button>
               </div>
             ))}

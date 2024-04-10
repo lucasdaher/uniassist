@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Announce = () => {
   return (
     <>
-      <div className="w-full mx-auto bg-blue-50 border border-blue-500/30 p-4 rounded-md mt-12 flex flex-col md:flex-row justify-center items-start md:items-center gap-4 md:gap-12">
+      <div className="w-full mx-auto bg-blue-50 border border-blue-500/30 p-4 rounded-md mt-12 flex flex-col md:flex-row justify-center items-start md:items-center gap-4 md:gap-12 mb-6">
         <img
           src={announce}
           alt="Announcement Image"

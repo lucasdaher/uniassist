@@ -19,18 +19,21 @@ const cards = [
   {
     id: 1,
     img: curriculo,
+    url: "curriculum",
     title: "Construtor de Currículo",
     desc: "Sabemos que para alguns a construção de um currículo pode ser complicado. Por isso, desenvolvemos uma ferramenta que te ajudará na criação do seu currículo.",
   },
   {
     id: 2,
     img: ia,
+    url: "chatbot",
     title: "Inteligência Artificial",
     desc: "Para facilitar a sua vida, nós integramos o ChatGPT dentro da nossa plataforma para que você tenha tudo em um só lugar, melhorando o seu workflow.",
   },
   {
     id: 3,
     img: tasks,
+    url: "todolist",
     title: "Agenda de Tarefas",
     desc: "Queremos que você seja o mais organizado possível, por isso desenvolvemos uma ferramenta para que você adicione suas tarefas e mantenha sua organização e desempenho.",
   },
@@ -84,7 +87,7 @@ const Tools = () => {
                 <button className="text-blue-500 outline-none border-none flex justify-center items-center gap-1 mt-6 group hover:text-blue-700">
                   <IoIosArrowForward className="text-2xl text-blue-500 animate-ia group-hover:text-blue-700" />
                   <Link
-                    to={`/app/tools/curriculum`}
+                    to={`/app/tools/${card.url}`}
                     className="no-underline leading-none"
                   >
                     <h1 className="font-sora font-medium text-blue-500 group-hover:text-blue-700">

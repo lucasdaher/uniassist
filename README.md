@@ -1,5 +1,5 @@
 # UniAssist
-Este é o repositório com o código fonte do meu projeto UniAssist, uma ferramenta para universitários conseguirem se organizar com suas tarefas e compromissos. O nome do projeto foi uma junção de **Universitário** com **Assistente**.
+Este é o repositório com o código fonte do meu projeto UniAssist, uma plataforma com ferramentas para universitários. O nome do projeto foi uma junção de **Universitário** com **Assistente**.
 
 ## Pré-requisitos
 > [!NOTE]
@@ -7,13 +7,6 @@ Este é o repositório com o código fonte do meu projeto UniAssist, uma ferrame
 
 - Instale as dependências do projeto utilizando `pnpm run build`
 - Instale o **React Router DOM** utilizando `pnpm install react-router-dom localforage match-sorter sort-by`
-
-## Funcionalidades
-Esta plataforma oferece as seguintes funções para o usuário:
-- Adicionar tarefas e compromissos;
-- Integração com o **ChatGPT** dentro da plataforma. Facilitando a vida do usuário em não ter que sair da plataforma e ter que fazer a consulta de forma externa;
-- Experiência de Usuário facilitada;
-- Compartilhamento de atividades e compromissos dentro da plataforma.
 
 > [!IMPORTANT]
 > Algumas funcionalidades podem estar incompletas ou com problemas que devem ser reportados aos desenvolvedores.

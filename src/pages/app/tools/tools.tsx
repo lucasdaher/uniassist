@@ -1,8 +1,10 @@
 import Header from "@/components/app/header";
 
-import { FaTasks, FaRegNewspaper } from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
-import { BsWechat } from "react-icons/bs";
+
+import curriculo from "../../../assets/curriculo.svg";
+import tasks from "../../../assets/task.svg";
+import ia from "../../../assets/ia.svg";
 
 import {
   Breadcrumb,
@@ -16,21 +18,21 @@ import { Link } from "react-router-dom";
 const cards = [
   {
     id: 1,
-    icon: <BsWechat className="text-2xl text-blue-500 leading-none" />,
+    img: curriculo,
+    title: "Construtor de Currículo",
+    desc: "Sabemos que para alguns a construção de um currículo pode ser complicado. Por isso, desenvolvemos uma ferramenta que te ajudará na criação do seu currículo.",
+  },
+  {
+    id: 2,
+    img: ia,
     title: "Inteligência Artificial",
     desc: "Para facilitar a sua vida, nós integramos o ChatGPT dentro da nossa plataforma para que você tenha tudo em um só lugar, melhorando o seu workflow.",
   },
   {
-    id: 2,
-    icon: <FaTasks className="text-2xl text-blue-500 leading-none" />,
+    id: 3,
+    img: tasks,
     title: "Agenda de Tarefas",
     desc: "Queremos que você seja o mais organizado possível, por isso desenvolvemos uma ferramenta para que você adicione suas tarefas e mantenha sua organização e desempenho.",
-  },
-  {
-    id: 3,
-    icon: <FaRegNewspaper className="text-2xl text-blue-500 leading-none" />,
-    title: "Construtor de Currículo",
-    desc: "Sabemos que para alguns a construção de um currículo pode ser complicado. Por isso, desenvolvemos uma ferramenta que te ajudará na criação do seu currículo.",
   },
 ];
 
@@ -40,7 +42,7 @@ const Tools = () => {
       <div className="">
         <Header selected="tools" />
 
-        <main className="max-w-[1440px] mx-auto mt-6 px-4">
+        <main className="max-w-[1440px] mx-auto mt-6 px-4 mb-12">
           <Breadcrumb className="mt-8">
             <BreadcrumbList className="text-md font-sora">
               <BreadcrumbItem>
@@ -65,7 +67,12 @@ const Tools = () => {
                 className="card border border-blue-500/30 bg-blue-50 rounded-md p-8"
                 key={card.id}
               >
-                <div className="flex justify-start items-center gap-4">
+                <div className="flex flex-col justify-center items-start gap-4">
+                  <img
+                    src={card.img}
+                    alt="Tool Illustration"
+                    className="max-w-[400px] w-64 mb-4"
+                  />
                   {/* <span className="leading-none">{card.icon}</span> */}
                   <h1 className="text-xl text-blue-500 leading-none font-sora font-bold w-full h-auto">
                     {card.title}
@@ -76,20 +83,19 @@ const Tools = () => {
                 </p>
                 <button className="text-blue-500 outline-none border-none flex justify-center items-center gap-1 mt-6 group hover:text-blue-700">
                   <IoIosArrowForward className="text-2xl text-blue-500 animate-ia group-hover:text-blue-700" />
-                  <h1 className="font-sora font-medium text-blue-500 group-hover:text-blue-700">
-                    Acessar ferramenta
-                  </h1>
+                  <Link
+                    to={`/app/tools/curriculum`}
+                    className="no-underline leading-none"
+                  >
+                    <h1 className="font-sora font-medium text-blue-500 group-hover:text-blue-700">
+                      Acessar ferramenta
+                    </h1>
+                  </Link>
                 </button>
               </div>
             ))}
           </div>
         </main>
-
-        <footer className="mt-24 bg-black py-2 px-6 w-full">
-          <h1 className="font-sora font-medium text-white/70 text-sm">
-            UniAssist.com
-          </h1>
-        </footer>
       </div>
     </>
   );

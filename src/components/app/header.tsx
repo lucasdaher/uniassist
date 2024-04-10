@@ -46,7 +46,11 @@ const Header = ({ selected = "" }: HeaderProps) => {
   return (
     <>
       <Sidebar open={sbOpen} handle={handleSidebar} />
-      <header className="bg-black w-full py-1">
+      <header
+        className={`${
+          sbOpen ? "" : "fixed top-0 left-0 z-10"
+        } bg-black w-full py-1`}
+      >
         <div className="px-8 max-w-[1440px] mx-auto flex justify-between items-center gap-12">
           <Link
             to={`/app`}

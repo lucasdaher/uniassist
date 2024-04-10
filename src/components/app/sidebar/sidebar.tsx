@@ -23,7 +23,7 @@ const Sidebar = ({ open, handle }: SidebarProps) => {
   }, []);
   return (
     <aside
-      className={`fixed lg:hidden xl:hidden border-t border-white/30 bg-black w-full h-full transition-all duration-300 ${
+      className={`fixed lg:hidden xl:hidden border-t border-white/30 bg-black w-full h-full transition-all duration-100 ${
         open ? "top-[63px] -right-[100%]" : "top-[63px] right-0"
       } z-20`}
     >

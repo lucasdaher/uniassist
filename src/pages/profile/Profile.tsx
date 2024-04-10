@@ -21,6 +21,10 @@ const Profile = () => {
   const [storedEmail, setStoredEmail] = useState<string | null>(null);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     const emailStorage = localStorage.getItem("emailAccess");
     if (emailStorage) {
       const parsedData = JSON.parse(emailStorage);
@@ -34,7 +38,7 @@ const Profile = () => {
         {/* <Link to={`/app`} className="no-underline">
           <FaArrowLeft className="text-blue-500 hover:text-blue-700 transition-all duration-300 text-2xl" />
         </Link> */}
-        <Breadcrumb className="">
+        <Breadcrumb className="mt-6">
           <BreadcrumbList className="text-md font-sora">
             <BreadcrumbItem>
               <Link to={`/app`}>Início</Link>

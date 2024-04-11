@@ -2,8 +2,12 @@ import Header from "../header";
 
 import milestones from "../../assets/milestones.svg";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const SuccessRequest = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <Header />

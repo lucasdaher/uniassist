@@ -8,7 +8,7 @@ const About = () => {
           <h1 className="text-white font-sora font-bold text-3xl">
             Sobre o projeto
           </h1>
-          <p className="text-blue-50 font-medium text-md mt-1">
+          <p className="text-blue-50 font-medium text-md mt-4 md:mt-1">
             O UniAssist é uma plataforma especialmente criada para auxiliar os
             universitários. Nosso principal objetivo é aperfeiçoar a organização
             dos estudantes, assegurando o cumprimento de suas atividades e

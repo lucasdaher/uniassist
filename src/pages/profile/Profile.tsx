@@ -129,6 +129,12 @@ const Profile = () => {
               </Button>
             </div>
           </section>
+
+          <section className="mb-8">
+            <h1 className="text-xs text-black/30 font-normal">
+              Versão alpha 1.0 - Linguagem C poderosíssima
+            </h1>
+          </section>
         </div>
       </main>
     </>

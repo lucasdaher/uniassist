@@ -52,16 +52,16 @@ const Sidebar = ({ open, handle }: SidebarProps) => {
         </li>
 
         <li className="text-white font-sora font-normal text-lg flex justify-start items-center gap-2 w-full">
-          <Link
-            to={`/app/tools/ia`}
+          <a
+            href="https://uniassist-chatbot.vercel.app/"
             className={`text-white hover:text-blue-500 transition-all duration-200`}
           >
             Assistente
-          </Link>
+          </a>
         </li>
         <li className="text-white font-sora font-normal text-lg flex justify-start items-center gap-2 w-full">
           <Link
-            to={`/app/tools/ia`}
+            to={`/app/tools/curriculum`}
             className={`text-white hover:text-blue-500 transition-all duration-200`}
           >
             Construtor de Currículo
@@ -72,7 +72,7 @@ const Sidebar = ({ open, handle }: SidebarProps) => {
         </li>
         <li className="text-white font-sora font-normal text-lg hover:text-blue-500 transition-all duration-200 w-full">
           <Link
-            to={`/app/tools/tasks`}
+            to={`/app/tools/todolist`}
             className={`hover:text-blue-500 transition-all duration-200`}
           >
             Agenda de Tarefas

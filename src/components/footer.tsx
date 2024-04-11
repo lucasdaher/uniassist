@@ -15,20 +15,14 @@ const Footer = () => {
 
         <ul className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-6">
           <li className="text-white font-normal text-xs md:text-sm hover:text-blue-500 hover:underline">
-            <Link to={`/`}>Termos de Uso</Link>
-          </li>
-          <li className="text-white font-normal text-xs md:text-sm hover:text-blue-500 hover:underline">
             <Link to={`/student`}>Universidades</Link>
           </li>
           <li className="text-white font-normal text-xs md:text-sm hover:text-blue-500 hover:underline">
-            <Link to={`/presentation`}>Parceiros</Link>
-          </li>
-          <li className="text-white font-normal text-xs md:text-sm hover:text-blue-500 hover:underline">
-            <Link to={`/help`}>Acesso Antecipado</Link>
+            <Link to={`/project-presentation`}>Apresentação do Projeto</Link>
           </li>
         </ul>
 
-        <p className="text-white font-semibold text-sm mt-4 text-center">
+        <p className="text-blue-100 font-semibold text-sm mt-4 text-center">
           Todos os direitos reservados para UniAssist &copy;
         </p>
       </div>

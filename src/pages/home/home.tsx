@@ -11,7 +11,7 @@ const Home = () => {
   }, []);
   return (
     <>
-      <Header />
+      <Header accessBtn={true} />
 
       <main className="bg-gradient-to-t from-blue-200 to-blue-500 w-full h-max">
         <Presentation />

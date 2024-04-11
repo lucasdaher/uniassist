@@ -43,7 +43,7 @@ const Cards = () => {
           <h1 className="text-blue-500 font-bold text-2xl mt-4 w-full">
             {card.name}
           </h1>
-          <p className="text-dark-500/70 text-md mt-2 w-full h-[96px]">
+          <p className="text-dark-500/70 text-md mt-2 w-full min-h-[96px]">
             {card.desc}
           </p>
           <button className="flex justify-center items-center gap-1 text-blue-500 font-normal text-md mt-6 hover:text-blue-700 transition-all duration-200">

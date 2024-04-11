@@ -45,6 +45,10 @@ const RequestForm = ({ title }: RequestForm) => {
 
   const [isEmailFocus, setIsEmailFocus] = useState(false);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       {(localStorage.getItem("access") === "access" && (

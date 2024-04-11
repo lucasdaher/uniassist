@@ -4,11 +4,11 @@ import Request from "./pages/request/request";
 import SuccessRequest from "./components/request/successRequest";
 import App from "./App";
 import Tools from "./pages/app/tools/tools";
-import Profile from "./pages/profile/profile";
 import Benefits from "./pages/app/benefits/benefits";
 import Error from "./pages/error/error";
 import Curriculum from "./pages/app/tools/curriculum/curriculum";
 import ProjectPresentation from "./components/presentation/projectPresentation";
+import Profile from "./pages/profile/profile";
 
 export const router = createBrowserRouter([
   {

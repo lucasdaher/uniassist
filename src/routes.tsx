@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+
 import Home from "./pages/home/home";
 import Request from "./pages/request/request";
 import SuccessRequest from "./components/request/successRequest";
@@ -7,8 +8,9 @@ import Tools from "./pages/app/tools/tools";
 import Benefits from "./pages/app/benefits/benefits";
 import Error from "./pages/error/error";
 import Curriculum from "./pages/app/tools/curriculum/curriculum";
-import ProjectPresentation from "./components/presentation/projectPresentation";
 import Profile from "./pages/profile/profile";
+import Presentation from "./pages/projectPresentation/presentation";
+import Todolist from "./pages/app/tools/todolist/todolist";
 
 export const router = createBrowserRouter([
   {
@@ -18,7 +20,7 @@ export const router = createBrowserRouter([
   },
   {
     path: "/project-presentation",
-    element: <ProjectPresentation />,
+    element: <Presentation />,
   },
   {
     path: "/request-access",
@@ -47,5 +49,9 @@ export const router = createBrowserRouter([
   {
     path: "/app/tools/curriculum",
     element: <Curriculum />,
+  },
+  {
+    path: "/app/tools/todolist",
+    element: <Todolist />,
   },
 ]);

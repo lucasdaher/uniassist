@@ -27,7 +27,6 @@ const cards = [
   {
     id: 2,
     img: ia,
-    url: "",
     title: "Inteligência Artificial",
     desc: "Para facilitar a sua vida, nós integramos o ChatGPT dentro da nossa plataforma para que você tenha tudo em um só lugar, melhorando o seu workflow.",
   },
@@ -51,7 +50,7 @@ const Tools = () => {
 
         <main className="max-w-[1440px] mx-auto mt-6 px-4 mb-12">
           <Breadcrumb className="mt-8">
-            <BreadcrumbList className="text-md font-sora">
+            <BreadcrumbList className="text-base font-sora">
               <BreadcrumbItem>
                 <Link to={`/app`}>Início</Link>
               </BreadcrumbItem>
@@ -63,9 +62,9 @@ const Tools = () => {
           </Breadcrumb>
 
           <h1 className="text-3xl font-sora font-bold text-blue-500 mb-1 mt-6">
-            Ferramentas disponíveis
+            Ferramentas
           </h1>
-          <p className="text-md font-sora font-regular text-black/70 border-b border-[#ccc]/60 pb-6 mb-8">
+          <p className="text-base font-sora font-regular text-black/70 border-b border-[#ccc]/60 pb-6 mb-8">
             Confira todas as ferramentas disponíveis em nossa plataforma:
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
@@ -85,7 +84,7 @@ const Tools = () => {
                     {card.title}
                   </h1>
                 </div>
-                <p className="text-md text-black/70 h-auto min-h-[96px] font-sora font-normal mt-3">
+                <p className="text-base text-black/70 h-auto min-h-[96px] font-sora font-normal mt-3">
                   {card.desc}
                 </p>
                 <button className="text-blue-500 outline-none border-none flex justify-center items-center gap-1 mt-6 group hover:text-blue-700">
@@ -96,7 +95,7 @@ const Tools = () => {
                       to={`/app/tools/${card.url}`}
                       className="no-underline leading-none"
                     >
-                      <h1 className="font-sora font-medium text-blue-500 group-hover:text-blue-700 text-md sm:text-md text-left">
+                      <h1 className="font-sora font-medium text-blue-500 group-hover:text-blue-700 text-base sm:text-base text-left">
                         Acessar ferramenta
                       </h1>
                     </Link>
@@ -105,7 +104,7 @@ const Tools = () => {
                       href="https://uniassist-chatbot.vercel.app/"
                       className="no-underline leading-none"
                     >
-                      <h1 className="font-sora font-medium text-blue-500 group-hover:text-blue-700 text-md sm:text-md text-left">
+                      <h1 className="font-sora font-medium text-blue-500 group-hover:text-blue-700 text-base sm:text-base text-left">
                         Acessar ferramenta
                       </h1>
                     </a>
@@ -114,6 +113,12 @@ const Tools = () => {
               </div>
             ))}
           </div>
+
+          <section className="mt-8">
+            <h1 className="text-xs text-black/30 font-normal">
+              Versão alpha 1.0
+            </h1>
+          </section>
         </main>
       </div>
     </>

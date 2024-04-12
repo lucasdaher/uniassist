@@ -3,7 +3,10 @@ import Announce from "./components/app/announcements/announce";
 import Header from "./components/app/header";
 
 import { useNavigate } from "react-router-dom";
-// import LastTasks from "./components/app/task/lastTasks";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 import { HiMiniBellAlert } from "react-icons/hi2";
 

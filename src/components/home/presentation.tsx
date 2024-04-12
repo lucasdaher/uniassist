@@ -3,7 +3,11 @@ import { Link } from "react-router-dom";
 const Presentation = () => {
   return (
     <>
-      <section className="max-w-[1440px] mx-auto px-4">
+      <section
+        className="max-w-[1440px] mx-auto px-4"
+        data-aos="fade-left"
+        data-aos-delay="300"
+      >
         <div className="flex flex-col justify-center items-center">
           <h5 className="text-white bg-black px-3 rounded-md font-medium text-sm mt-24 font-sora animate-rotate text-center">
             GRATUITO PARA ESTUDANTES

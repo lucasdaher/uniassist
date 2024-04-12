@@ -33,6 +33,8 @@ const Cards = () => {
       className="max-w-[1440px] mx-auto grid justify-center place-content-center 
       gap-x-6 gap-y-8 grid-cols-1 sm:grid-cols-2 
     md:grid-cols-2 lg:grid-cols-3 mt-32"
+      data-aos="fade-right"
+      data-aos-delay="300"
     >
       {data.map((card) => (
         <div

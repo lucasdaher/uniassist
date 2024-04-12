@@ -2,7 +2,11 @@ import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <section className="bg-blue-600 w-full p-8 mt-16 md:mt-44">
+    <section
+      className="bg-blue-600 w-full p-8 mt-16 md:mt-44"
+      data-aos="fade-up"
+      data-aos-delay="300"
+    >
       <div className="max-w-[1440px] mx-auto">
         <div className="">
           <h1 className="text-white font-sora font-bold text-3xl">
@@ -17,7 +21,7 @@ const About = () => {
           <Link to={`/request-access`} className="no-underline">
             <button
               type="button"
-              className="font-semibold text-md text-white bg-blue-900 rounded-md px-4 py-2 mt-6 hover:bg-blue-800 hover:transform hover:translate-y-[-4%] transition-all duration-200"
+              className="font-medium font-sora text-md text-blue-500 bg-white rounded-md px-4 py-4 mt-6 hover:bg-blue-50 hover:transform hover:translate-y-[-4%] transition-all duration-200"
             >
               Solicitar o meu acesso
             </button>

@@ -4,7 +4,7 @@ import presentation from "../../assets/presentation/presentation.svg";
 const Presentation = () => {
   return (
     <>
-      <div className="w-full h-full bg-blue-500 p-4">
+      <div className="w-full min-h-screen h-full bg-blue-500 p-4">
         <header className="max-w-[1440px] mx-auto flex flex-col justify-center items-center">
           <img
             src={presentation}
@@ -19,9 +19,13 @@ const Presentation = () => {
           </p>
         </header>
 
-        <main className="max-w-[1440px] mx-auto mt-8">
-          <div className="flex flex-col justify-center items-center gap-4">
-            <section className="bg-blue-50 border border-blue-500 rounded-md p-4">
+        <main className="max-w-[1440px] mx-auto mt-8 w-full">
+          <div className="flex flex-col justify-center items-center gap-4 w-full">
+            <section
+              className="bg-blue-50 border border-blue-500 rounded-md p-4 w-full"
+              data-aos="fade-in"
+              data-aos-delay="300"
+            >
               <h1 className="text-lg font-sora font-bold text-blue-500 text-left">
                 01. Introdução
               </h1>
@@ -33,7 +37,11 @@ const Presentation = () => {
               </p>
             </section>
 
-            <section className="bg-blue-50 border border-blue-500 rounded-md p-4">
+            <section
+              className="bg-blue-50 border border-blue-500 rounded-md p-4 w-full"
+              data-aos="fade-in"
+              data-aos-delay="300"
+            >
               <h1 className="text-lg font-sora font-bold text-blue-500 text-left">
                 02. Solicitar o seu acesso
               </h1>
@@ -45,7 +53,11 @@ const Presentation = () => {
               </p>
             </section>
 
-            <section className="bg-blue-50 border border-blue-500 rounded-md p-4">
+            <section
+              className="bg-blue-50 border border-blue-500 rounded-md p-4 w-full"
+              data-aos="fade-in"
+              data-aos-delay="300"
+            >
               <h1 className="text-lg font-sora font-bold text-blue-500 text-left">
                 03. Objetivo da plataforma
               </h1>
@@ -57,7 +69,11 @@ const Presentation = () => {
               </p>
             </section>
 
-            <section className="bg-blue-50 border border-blue-500 rounded-md p-4">
+            <section
+              className="bg-blue-50 border border-blue-500 rounded-md p-4 w-full"
+              data-aos="fade-in"
+              data-aos-delay="300"
+            >
               <h1 className="text-lg font-sora font-bold text-blue-500 text-left">
                 04. Principal ferramenta
               </h1>
@@ -69,7 +85,11 @@ const Presentation = () => {
               </p>
             </section>
 
-            <section className="bg-blue-50 border border-blue-500 rounded-md p-4">
+            <section
+              className="bg-blue-50 border border-blue-500 rounded-md p-4 w-full mb-4"
+              data-aos="fade-in"
+              data-aos-delay="300"
+            >
               <h1 className="text-lg font-sora font-bold text-blue-500 text-left">
                 05. Benefícios
               </h1>
@@ -98,18 +118,6 @@ const Presentation = () => {
                   acadêmicas de forma eficiente.
                 </li>
               </ul>
-            </section>
-
-            <section className="bg-blue-50 border border-blue-500 rounded-md p-4 mb-6">
-              <h1 className="text-lg font-sora font-bold text-blue-500 text-left">
-                06. Principal ferramenta
-              </h1>
-              <p className="text-black/70 font-sora font-normal text-left text-sm mt-2 leading-6">
-                Nossa principal ferramenta atualmente é o{" "}
-                <strong>Criador de Currículos</strong>, que auxilia estudantes
-                que, mesmo com todos os modelos disponíveis na internet, ainda
-                enfrentam dificuldades ao criar um currículo pela primeira vez.
-              </p>
             </section>
 
             <Link to={`/request-access`} className="no-underline outline-none">

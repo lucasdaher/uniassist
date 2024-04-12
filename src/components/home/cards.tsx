@@ -46,7 +46,13 @@ const Cards = () => {
           <p className="text-dark-500/70 text-md mt-2 w-full min-h-[96px]">
             {card.desc}
           </p>
-          <button className="flex justify-center items-center gap-1 text-blue-500 font-normal text-md mt-6 hover:text-blue-700 transition-all duration-200">
+          <button
+            className="flex justify-center items-center gap-1 text-blue-500 font-normal text-md mt-6 hover:text-blue-700 transition-all duration-200"
+            onClick={(e) => {
+              e.preventDefault();
+              window.alert("Esta página está em desenvolvimento...");
+            }}
+          >
             {card.buttonText}{" "}
             <MdKeyboardArrowRight className="text-xl leading-none" />
           </button>

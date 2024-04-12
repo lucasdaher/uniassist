@@ -173,8 +173,6 @@ const Curriculum = () => {
           </div>
         </div>
 
-        {/* Renderização principal */}
-        {/* Por padrão será sempre "Edição" */}
         <div className="container bg-gray/20 border border-gray rounded-md px-4 py-4 mt-2 transition-all duration-300 h-auto mb-12">
           {(selected === "edit" && (
             <form
@@ -187,7 +185,7 @@ const Curriculum = () => {
               {/* Nome Completo */}
               <div className="form-group flex flex-col justify-center items-start w-full">
                 <label className="font-sora font-semibold text-md text-blue-500">
-                  Nome completo:
+                  Nome Completo:
                 </label>
                 <input
                   type="text"
@@ -321,7 +319,7 @@ const Curriculum = () => {
               {/* Sobre você */}
               <div className="form-group flex flex-col justify-center items-start w-full">
                 <label className="font-sora font-semibold text-md text-blue-500">
-                  Conte sobre você:
+                  Conte Sobre Você:
                 </label>
                 <textarea
                   placeholder="Digite um pequeno resumo sobre você"
@@ -545,7 +543,7 @@ const Curriculum = () => {
                 {/* About */}
                 <div className="group">
                   <h1 className="font-sora font-semibold text-md text-blue-500">
-                    Sobre mim:
+                    Sobre Mim:
                   </h1>
                   <p
                     className={`font-sora font-normal text-md ${
